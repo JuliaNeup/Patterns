@@ -15,6 +15,15 @@ import static com.codeborne.selenide.Selenide.open;
 import static ru.netology.delivery.Data.DataGenerator.Registration.*;
 
 public class CardDeliveryTest {
+    @BeforeAll
+    static void setUpAll() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+    }
+
+    @AfterAll
+    static void tearDownAll() {
+        SelenideLogger.removeListener("allure");
+    }
     @BeforeEach
     void setUp() {
         open("http://localhost:9999");

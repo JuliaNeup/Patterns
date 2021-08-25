@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 import ru.netology.delivery.Data.DataGenerator;
+import io.qameta.allure.selenide.AllureSelenide;
 
 import java.time.Duration;
 

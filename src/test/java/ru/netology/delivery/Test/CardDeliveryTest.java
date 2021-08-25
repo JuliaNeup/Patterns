@@ -1,11 +1,14 @@
 package ru.netology.delivery.Test;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
-import ru.netology.delivery.Data.DataGenerator;
-import io.qameta.allure.selenide.AllureSelenide;
+import ru.netology.data.DataGenerator;
 
 import java.time.Duration;
 
@@ -13,7 +16,8 @@ import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static ru.netology.delivery.Data.DataGenerator.Registration.*;
+import static java.time.Duration.ofSeconds;
+import static ru.netology.data.DataGenerator.Registration.*;
 
 public class CardDeliveryTest {
     @BeforeAll
